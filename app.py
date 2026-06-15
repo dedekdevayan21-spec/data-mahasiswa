@@ -16,9 +16,9 @@ def profil():
 @app.route('/dosen')
 def dosen():
     data_dosen = [
-        {"nama": "Dr. Andi Wijaya", "nidn": "01234567", "matkul": "Pemrograman Web"},
-        {"nama": "Rina Lestari, M.T.", "nidn": "07654321", "matkul": "Basis Data"},
-        {"nama": "Budi Santoso, Ph.D.", "nidn": "02468135", "matkul": "Kecerdasan Buatan"}
+        {"nama": "Ir. Muhibul Jamal, S.T., M.T.", "nidn": "13010101", "matkul": "Aljabar Vektor dan Matriks"},
+    {"nama": "Munandar, S.T., M.T.", "nidn": "13010102", "matkul": "AI Robotik"},
+    {"nama": "Atha Irrahman, S.Si., M.T.", "nidn": "13010103", "matkul": "Pemrograman Berorientasi Objek"}
     ]
     return render_template('dosen.html', dosen_list=data_dosen)
 
@@ -26,16 +26,16 @@ def dosen():
 @app.route('/mahasiswa')
 def mahasiswa():
     data_mahasiswa = [
-        {"nim": "1001", "nama": "Ahmad", "status": "Aktif"},
-        {"nim": "1002", "nama": "Siti", "status": "Aktif"},
-        {"nim": "1003", "nama": "Budi", "status": "Cuti"},
-        {"nim": "1004", "nama": "Dewi", "status": "Aktif"},
-        {"nim": "1005", "nama": "Eko", "status": "Alumni"},
-        {"nim": "1006", "nama": "Fitri", "status": "Aktif"},
-        {"nim": "1007", "nama": "Guntur", "status": "Cuti"},
-        {"nim": "1008", "nama": "Hani", "status": "Aktif"},
-        {"nim": "1009", "nama": "Ira", "status": "Aktif"},
-        {"nim": "1010", "nama": "Joko", "status": "Alumni"}
+    {"nim": "24210002", "nama": "Dedek Irwansyah", "status": "Aktif"},
+    {"nim": "24210003", "nama": "Muhammad Yafi Azka", "status": "Aktif"},
+    {"nim": "24210004", "nama": "Rio Refaldo", "status": "cuti"},
+    {"nim": "24210006", "nama": "Epiyanti", "status": "Aktif"},
+    {"nim": "24210007", "nama": "Muhammad Alfarizi", "status": "Aktif"},
+    {"nim": "24210010", "nama": "Farhan", "status": "Aktif"},
+    {"nim": "24210019", "nama": "Al Qadri", "status": "Aktif"},
+    {"nim": "24210028", "nama": "Hafizah Azalia", "status": "Aktif"},
+    {"nim": "24210029", "nama": "Wesy Puspita", "status": "Aktif"},
+    {"nim": "24210031", "nama": "Raihan Alqi Sahara", "status": "Aktif"}
     ]
     return render_template('mahasiswa.html', mahasiswa_list=data_mahasiswa)
 
