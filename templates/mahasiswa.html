@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card shadow-lg p-4">
+
+<h2>Daftar Mahasiswa</h2>
+
+<table class="table table-hover table-bordered">
+
+<thead>
+
+<tr>
+    <th>NIM</th>
+    <th>Nama Mahasiswa</th>
+    <th>Status</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for mhs in mahasiswa_list %}
+
+<tr>
+
+<td>{{ mhs.nim }}</td>
+<td>{{ mhs.nama }}</td>
+
+<td>
+
+{% if mhs.status == 'Aktif' %}
+<span class="badge bg-success">Aktif</span>
+
+{% elif mhs.status == 'Cuti' %}
+<span class="badge bg-warning text-dark">Cuti</span>
+
+{% else %}
+<span class="badge bg-secondary">Alumni</span>
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endblock %}
